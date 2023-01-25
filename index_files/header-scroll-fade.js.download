@@ -1,0 +1,22 @@
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var header = document.getElementsByTagName("header")[0];
+    var text = header.getElementsByTagName("h1")[0];
+    var logo = header.getElementsByClassName("headerlogo")[0];
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        
+        header.style.backgroundColor = "white";
+        header.style.outlineWidth = "1px";
+        text.style.color = "black";
+        logo.style.filter ="invert()";
+    } else {
+        
+        header.style.backgroundColor = "transparent";
+        header.style.outlineWidth = "0px";
+        text.style.color = "white";
+        logo.style.filter = "invert() invert()";
+    }
+}
+
+scrollFunction();
